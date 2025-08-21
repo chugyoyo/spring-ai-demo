@@ -1,8 +1,5 @@
 package com.chugyoyo.ai.controller;
 
-import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
-import lombok.experimental.FieldDefaults;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,13 +8,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(value = "/ollama")
-public class OllamaController {
+@RequestMapping(value = "/chat")
+public class ChatController {
 
     private final ChatClient chatClient;
 
     @Autowired
-    public OllamaController(ChatClient chatClient) {
+    public ChatController(ChatClient chatClient) {
         this.chatClient = chatClient;
     }
 
